@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class TsvTitleDeserializer {
+public class TsvTitleDeserializer implements TitleDeserializer{
     public Title deserialize(String line){
         String[]columns=line.split("\t");
         return new Title(columns[0],typeOf(columns[1]),columns[2],columns[3], genre(columns[4]));
